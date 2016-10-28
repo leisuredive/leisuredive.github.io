@@ -1,11 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600");
 @import url("font-awesome.min.css");
 
-/*
-	Parallelism by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+@font-face {
+ font-family: 'HandOfSean';
+ src: url("../fonts/handsean.eot"); /* For IE */
+}
+
+@font-face {
+  font-family: 'HandOfSean';
+  src: url("../fonts/handsean.ttf");
+}
 
 /* Reset */
 
@@ -199,6 +203,10 @@
 		cursor: default;
 	}
 
+		#header h1 {
+			font-family: 'HandOfSean', 'Lucida Grande', sans-serif;
+		}
+
 		#header p {
 			opacity: 0.65;
 		}
@@ -282,7 +290,7 @@
 
 			#header {
 				padding: 2em 3em;
-				xmin-height: 212px;
+				min-height: 212px;
 				vertical-align: middle;
 			}
 
@@ -299,7 +307,7 @@
 				}
 
 				#header h1 {
-					font-size: 3em;
+					font-size: 2.8em;
 					line-height: 1em;
 				}
 
@@ -317,6 +325,7 @@
 				left: 0;
 				width: 100%;
 				overflow: hidden;
+				min-height: 100px;
 			}
 
 				#footer h2 {
