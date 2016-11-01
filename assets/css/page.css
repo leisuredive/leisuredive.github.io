@@ -90,8 +90,7 @@
         color: #fff;
         letter-spacing: 0.05em;
         text-transform: uppercase;
-        font-size: 1.4em;
-        margin-bottom: 10px;
+        margin: 10px 0;
     }
 
     strong, b {
@@ -110,11 +109,37 @@
     border-radius: 8px;
     z-index: 100;
     position: relative;
+    font-weight: 300;
 }
 
 .page p {
     margin: 15px 0;
-    font-weight: 300;
+}
+
+.page h2 {
+    font-size: 1.4em;
+}
+
+.page h3 {
+    font-size: 1.2em;
+}
+
+.page ol,
+.page ul {
+    margin-left: 20px;
+}
+
+.page ol {
+    list-style: decimal;
+}
+
+.page ul {
+    list-style: circle;
+}
+
+.page ol li,
+.page ul li {
+    margin: 5px 0;
 }
 
 
@@ -206,7 +231,7 @@
             #footer {
                 width: 100%;
                 overflow: hidden;
-                min-height: 100px;
+                min-height: 80px;
             }
 
                 #footer h2 {
