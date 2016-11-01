@@ -198,7 +198,9 @@
 
 	#header {
 		position: relative;
-		background: #d64760 url("images/overlay.png");
+		/*background: #d64760 url("images/overlay.png");*/
+		/*background-color: #08AEF4;*/
+		background-color: #a2103c;
 		color: #fff;
 		cursor: default;
 	}
@@ -222,13 +224,21 @@
 			}
 
 			body {
-				background-image: url("images/overlay.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.65)), url("../../images/bg.jpg");
+/*				background-image: url("images/overlay.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.65)), url("../../images/bg.jpg");
 				background-image: url("images/overlay.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.65)), url("../../images/bg.jpg");
 				background-image: url("images/overlay.png"), -ms-linear-gradient(top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.65)), url("../../images/bg.jpg");
 				background-image: url("images/overlay.png"), linear-gradient(top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.65)), url("../../images/bg.jpg");
 				background-position: top left, bottom left, auto;
 				background-size: auto, 100% 100%, cover;
-				background-repeat: repeat, no-repeat, auto;
+				background-repeat: repeat, no-repeat, auto;*/
+				/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#87e0fd+0,53cbf1+40,05abe0+100;Blue+3D+%23+16 */
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#458daf+0,22577d+62,183b56+100 */
+background: #458daf; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  #458daf 0%, #22577d 62%, #183b56 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover,  #458daf 0%,#22577d 62%,#183b56 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center,  #458daf 0%,#22577d 62%,#183b56 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#458daf', endColorstr='#183b56',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
 				padding: 0;
 				font-size: 12pt;
 				line-height: 1.75em;
