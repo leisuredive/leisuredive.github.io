@@ -86,11 +86,8 @@
         }
 
     h1, h2, h3, h4, h5, h6 {
-        font-weight: 300;
+        font-weight: 400;
         color: #fff;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        margin: 10px 0;
     }
 
     strong, b {
@@ -106,21 +103,36 @@
     padding: 20px;
 }
 
+.page header h1 {
+    font-size: 2em;
+    text-align: center;
+}
+
 /* Page */
 
 .page article {
     max-width: 600px;
     padding: 30px;
-    margin: 80px auto;
-    background: rgba(0,0,0,0.2);
+    margin: 20px auto;
+    background: rgba(0,0,0,0.3);
     border-radius: 8px;
-    z-index: 100;
-    position: relative;
     font-weight: 300;
 }
 
 .page article p {
     margin: 15px 0;
+}
+
+.page article h1,
+.page article h2,
+.page article h3,
+.page article h4,
+.page article h5,
+.page article h6 {
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin: 10px 0;
 }
 
 .page article h2 {
