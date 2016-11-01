@@ -212,6 +212,9 @@
 
 		#header p {
 			opacity: 0.65;
+			font-weight: 300;
+    		text-transform: uppercase;
+    		letter-spacing: 1px;
 		}
 
 /* Desktop */
@@ -331,7 +334,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#458daf', end
 				}
 
 				#header p {
-					font-size: 1.25em;
+					font-size: 1em;
 					line-height: 1.5em;
 					margin: 0.5em 0 0 0;
 				}

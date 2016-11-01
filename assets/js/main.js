@@ -57,7 +57,7 @@ var parallelism = (function($) { var _ = {
 						minRows: 1,
 
 					// Padding (in px) between items (0 = no padding).
-						padding: 5,
+						padding: 2,
 
 					// Padding color.
 						paddingColor: '#fff',
