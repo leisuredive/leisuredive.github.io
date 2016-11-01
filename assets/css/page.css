@@ -99,9 +99,16 @@
         font-weight: 600;
     }
 
+/* Header for Page */
+
+.page header {
+    font-family: 'HandOfSean', 'Lucida Grande', sans-serif;
+    padding: 20px;
+}
+
 /* Page */
 
-.page {
+.page article {
     max-width: 600px;
     padding: 30px;
     margin: 80px auto;
@@ -112,33 +119,33 @@
     font-weight: 300;
 }
 
-.page p {
+.page article p {
     margin: 15px 0;
 }
 
-.page h2 {
+.page article h2 {
     font-size: 1.4em;
 }
 
-.page h3 {
+.page article h3 {
     font-size: 1.2em;
 }
 
-.page ol,
-.page ul {
+.page article ol,
+.page article ul {
     margin-left: 20px;
 }
 
-.page ol {
+.page article ol {
     list-style: decimal;
 }
 
-.page ul {
+.page article ul {
     list-style: circle;
 }
 
-.page ol li,
-.page ul li {
+.page article li,
+.page article li {
     margin: 5px 0;
 }
 
