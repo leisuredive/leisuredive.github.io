@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
-/*:300,300i,400,400i,700,700i*/
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400");
 @import url("font-awesome.min.css");
 
 @font-face {
@@ -112,7 +111,7 @@
 /* List */
 
 	ul.contact {
-		cursor: default;
+		/*cursor: default;*/
 		margin: 0 0 1em 0;
 	}
 
@@ -145,7 +144,7 @@
 		position: relative;
 		background: #1a1f2c;
 		background: rgba(255, 255, 255, 0.25);
-		cursor: default;
+		/*cursor: default;*/
 	}
 
 		.item.thumb h2 {
@@ -373,6 +372,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#458daf', end
 					border-left: solid 1px #333;
 					border-left-color: rgba(255, 255, 255, 0.25);
 					line-height: 1em;
+					font-size: 0.8em;
 				}
 
 					#footer .copyright li:first-child {
