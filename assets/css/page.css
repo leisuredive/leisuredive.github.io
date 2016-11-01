@@ -106,6 +106,7 @@
 .page header h1 {
     font-size: 2em;
     text-align: center;
+    letter-spacing: 0.05em;
 }
 
 /* Page */
