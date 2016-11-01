@@ -202,7 +202,8 @@
 		/*background-color: #08AEF4;*/
 		background-color: #a2103c;
 		color: #fff;
-		cursor: default;
+		/*cursor: default;*/
+		text-align: center;
 	}
 
 		#header h1 {
