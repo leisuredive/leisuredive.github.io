@@ -84,7 +84,7 @@ var parallelism = (function($) { var _ = {
 						scrollZoneWidth: 40,
 
 					// Delay (in ms) before showing thumbnails.
-						thumbDelay: 500,
+						thumbDelay: 0,
 
 					// Spread (in ms) to randomly stagger thumbnails (0 = don't stagger).
 						thumbDelaySpread: 1000,
