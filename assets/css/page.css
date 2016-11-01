@@ -86,9 +86,12 @@
         }
 
     h1, h2, h3, h4, h5, h6 {
-        font-weight: 400;
+        font-weight: 300;
         color: #fff;
-        letter-spacing: -0.05em;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        font-size: 1.4em;
+        margin-bottom: 10px;
     }
 
     strong, b {
@@ -96,6 +99,24 @@
         color: rgba(255, 255, 255, 0.85);
         font-weight: 600;
     }
+
+/* Page */
+
+.page {
+    max-width: 600px;
+    padding: 30px;
+    margin: 80px auto;
+    background: rgba(0,0,0,0.2);
+    border-radius: 8px;
+    z-index: 100;
+    position: relative;
+}
+
+.page p {
+    margin: 15px 0;
+    font-weight: 300;
+}
+
 
 /* List */
 
@@ -183,9 +204,6 @@
         /* Footer */
 
             #footer {
-                position: fixed;
-                bottom: 0;
-                left: 0;
                 width: 100%;
                 overflow: hidden;
                 min-height: 100px;
@@ -202,9 +220,6 @@
                 }
 
                 #footer .right {
-                    position: absolute;
-                    bottom: 0;
-                    right: 0;
                     padding: 2em;
                     text-align: right;
                 }
