@@ -135,7 +135,7 @@ var parallelism = (function($) { var _ = {
 						var i, j, x, y, t;
 
 						// Calculate number of rows we can fit on the screen.
-							rows = Math.min(Math.max(Math.floor(windowHeight / itemHeight) - 1, 1), _.settings.maxRows);
+							rows = Math.min(Math.max(Math.floor(windowHeight / itemHeight) - 0.75, 1), _.settings.maxRows);
 
 						// Reduce row count if we have more than we need.
 							while ( rows > _.settings.minRows && (itemsWidth / rows) < windowWidth )
