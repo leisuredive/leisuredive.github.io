@@ -337,10 +337,18 @@
 /* Masonry Fonts */
 
 .grid {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /*.grid::after {
@@ -351,15 +359,12 @@
 
 .grid-item {
   display: block;
-  flex: auto; 
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
   width: 250px;
   height: 250px;
-  margin: .5vw; 
-  /*
-  float: left;
-  width: 24%;
-  padding-bottom: 25%;
-  margin: 2px; */
+  margin: .5vw;
   border: 6px solid rgba(255, 255, 255, 1);
   -webkit-background-size: cover;
   -moz-background-size: cover;
