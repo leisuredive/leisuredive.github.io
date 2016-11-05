@@ -128,7 +128,9 @@
 
 			<div id="footer">
 				<div class="left">
-					<p><a href="/about/">How it started</a></p>
+					<p><a href="/about/">How it started</a> |
+					   <a href="/recent/">Recent Dives from Instagram/a> 
+					</p>
 				</div>
 				<div class="right">
 					<ul class="contact">
@@ -145,6 +147,28 @@
 			</div>
 
 		</div>
+
+<script>
+// Lazy load fonts
+var loadFont = function(url) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', url, true);
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      var style = document.createElement('style');
+      style.innerHTML = xhr.responseText;
+      document.head.appendChild(style);
+    }
+  };
+  xhr.send();
+}
+
+// Do this only after we've displayed the initial text.
+document.body.onload = function() {
+  var url = 'https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400';
+  loadFont(url);  // hold tight, i tell you below.
+}
+</script>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>

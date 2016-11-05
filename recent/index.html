@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LeisureDive.com > About</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!--[if lte IE 8]><script src="../assets/js/ie/html5shiv.js"></script><![endif]-->
+        <link rel="stylesheet" href="../assets/css/page.css" />
+        <link rel="shortcut icon" href="images/favicon.ico" />
+        <link rel="canonical" href="http://www.leisuredive.com/about" />
+    </head>
+    <body class="page">
+
+        <header>
+            <h1><a href="http://www.leisuredive.com">LeisureDive.com</a></h1>
+        </header>
+
+        <div class="page-container">
+
+            <article class="wide">
+                <h2>Hot Off the Instagram Feed</h2>
+
+                <div id="insta" class="grid">
+                  <!-- width of .grid-sizer used for columnWidth -->
+                  <div class="grid-sizer"></div>
+                </div>
+
+            </article>
+
+            <div id="footer">
+                <div class="left">
+                    <!--<p>How it started</p>-->
+                </div>
+                <div class="right">
+                    <ul class="contact">
+                        <li><a href="https://instagram.com/leisuredive" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                        <li><a href="https://facebook.com/leisuredive" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                        <li><a href="https://twitter.com/leisuredive" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                    </ul>
+                    <ul class="copyright">
+                        <li>&copy; Leisure Dive LLC</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
+<script
+  src="../assets/js/i.js"></script>
+
+<script> 
+$.ajax({
+  url: 'https://api.instagram.com/v1/users/self/media/recent/', // or /users/self/media/recent for Sandbox
+  dataType: 'jsonp',
+  type: 'GET',
+  data: {access_token: igt},
+  success: function(data) {
+    for(x in data.data) {
+      //$('#insta').append('<div class="grid-item" style="background-image: url('+data.data[x].images.standard_resolution.url+')"><a href="'+data.data[x].link+'" target="_blank"></a></div>');
+      $('#insta').append('<a href="'+data.data[x].link+'" target="_blank"><div class="grid-item" style="background-image: url('+data.data[x].images.standard_resolution.url+')"></div></a>'); 
+    }
+  },
+  error: function(data){
+    console.log(data); // send the error notifications to console
+  }
+});
+
+// Lazy load fonts
+var loadFont = function(url) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', url, true);
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      var style = document.createElement('style');
+      style.innerHTML = xhr.responseText;
+      document.head.appendChild(style);
+    }
+  };
+  xhr.send();
+}
+
+// Do this only after we've displayed the initial text.
+document.body.onload = function() {
+  var url = 'https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400';
+  loadFont(url);  // hold tight, i tell you below.
+}
+
+</script>
+
+    </body>
+</html>
