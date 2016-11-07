@@ -345,7 +345,7 @@ figure > img {
 
     @media screen and (max-width: 736px) {
 
-        .page article {
+        .page article.wide {
             padding: 10px 0;
         }
 
