@@ -83,7 +83,7 @@ body {
     line-height: 1.75em;
     height: 100%;
     min-height: 450px;
-    min-width: 1000px;
+    /*min-width: 1000px;*/
 }
 
     a {
@@ -115,7 +115,7 @@ body {
 
 .page header {
     font-family: 'HandOfSean', 'Lucida Grande', sans-serif;
-    padding: 40px;
+    padding: 40px 40px 20px 40px;
 }
 
 .page header h1 {
@@ -232,56 +232,63 @@ body {
             display: none;
         }
 
+
 /* Insta Gallery */
 
-.grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.gallery {
+    font-size: 0; /* Remove space between inline block elements */
 }
 
-/*.grid::after {
-   content: "";
-   display: block; 
-   clear: both;
-}*/
-
-.grid-item {
-  display: block;
-  -webkit-box-flex: 1;
-      -ms-flex: auto;
-          flex: auto;
-  width: 250px;
-  height: 250px;
-  margin: .5vw;
-  border: 6px solid rgba(255, 255, 255, 1);
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+figure {
+    margin: 0;
 }
 
-.grid-item a {
-    display: block;
-    width: 250px;
-    height: 250px;
+figure > img {
+    max-width: 100%;
+    height: auto;
 }
 
 
 /* Desktop */
 
     @media screen and (min-width: 737px) {
+
+        /* Photo Gallery */
+
+        .gallery a {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            width: 23%;
+            padding-bottom: 23%;
+            border: 5px solid #FEFEFE;
+            margin: 0 2% 2% 0;
+        }
+
+        .gallery a:nth-of-type(4n) {
+          margin-right: 0;
+        }
+
+        figure > img {
+            max-height: 100%;
+            max-width: none;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            height: 100%;
+            width: auto;
+            -webkit-transform: translate(-50%,-50%);
+              -ms-transform: translate(-50%,-50%);
+                  transform: translate(-50%,-50%);
+        }
+
+        figure > img.portrait {
+            max-width: 100%;
+            max-height: none;
+            width: 100%;
+            height: auto;
+        }
+
 
         /* List */
 
@@ -338,6 +345,19 @@ body {
 
     @media screen and (max-width: 736px) {
 
+        .page article {
+            padding: 10px 0;
+        }
+
+        .page article h2 {
+            text-align: center;
+        }
+
+        figure > img {
+            border-bottom: 1px solid #FFF;
+            margin-bottom: 10px;
+        }
+
         /* List */
 
             ul.contact li {
@@ -364,17 +384,5 @@ body {
                 #footer .copyright {
                     margin: 2em 0 0 0;
                 }
-
-        .grid-item {
-          width: 100%;
-          padding-bottom: 100%;
-          margin: 0 0 10px 0;
-          border: none;
-        }
-
-        .grid-item a {
-            width: 100%;
-            padding-bottom: 100%;
-        }
 
     }

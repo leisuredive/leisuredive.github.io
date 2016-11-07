@@ -15,17 +15,14 @@
             <h1><a href="http://www.leisuredive.com">LeisureDive.com</a></h1>
         </header>
 
-        <div class="page-container">
+        <article class="wide">
+          <h2>Hot Off the Instagram Feed</h2>
+          <div id="insta" class="gallery">
+            <!-- width of .grid-sizer used for columnWidth -->
+            <div class="grid-sizer"></div>
+          </div>
 
-            <article class="wide">
-                <h2>Hot Off the Instagram Feed</h2>
-
-                <div id="insta" class="grid">
-                  <!-- width of .grid-sizer used for columnWidth -->
-                  <div class="grid-sizer"></div>
-                </div>
-
-            </article>
+        </div>
 
             <div id="footer">
                 <div class="left">
@@ -60,9 +57,17 @@ $.ajax({
   type: 'GET',
   data: {access_token: igt},
   success: function(data) {
-    for(x in data.data) {
-      //$('#insta').append('<div class="grid-item" style="background-image: url('+data.data[x].images.standard_resolution.url+')"><a href="'+data.data[x].link+'" target="_blank"></a></div>');
-      $('#insta').append('<a href="'+data.data[x].link+'" target="_blank"><div class="grid-item" style="background-image: url('+data.data[x].images.standard_resolution.url+')"></div></a>'); 
+    console.log(data);
+    for(i in data.data) {
+      var imgWidth = data.data[i].images.standard_resolution.width;
+      var imgHeight = data.data[i].images.standard_resolution.height;
+      var imgCode = '<img src="';
+      if (imgHeight > imgWidth) {
+        imgCode = '<img class="portrait" src="';
+      }
+
+      $('#insta').append('<a href="'+data.data[i].link+'" target="_blank"><figure>' +
+        imgCode + data.data[i].images.standard_resolution.url + ')"></figure></a>'); 
     }
   },
   error: function(data){
